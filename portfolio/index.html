@@ -2,15 +2,12 @@
 layout: default
 title: Yve's Portfolio
 ---
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" style="width:100%; height:100%;">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>kekayan's Resume</title>
-</head>
-  <body style="width:100%; height:100%; margin:0;">
-    <iframe src="https://docs.google.com/gview?url= mynameisyve.github.io/image/portfolio.pdf &embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
-  </body>
-</html>
+<h1>{{ page.title }}</h1>
+	<ul class="work">
 
+	  {% for work in site.works %}
+	    <li><span>{{ work.date | date_to_string }}</span> » <a href="{{ work.url }}" title="{{ work.title }}">{{ work.title }}</a></li>
+	  {% endfor %}
+	</ul>
+	<src="https://mynameisyve.github.io/image/portfolio.pdf">
 	
